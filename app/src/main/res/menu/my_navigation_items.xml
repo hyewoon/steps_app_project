@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/targetFragment"
+        android:title="목표"
+        android:icon="@drawable/target"/>
+    <item
+        android:id="@+id/homeFragment"
+        android:title="홈"
+        android:icon="@drawable/run_circle"/>
+    <item
+        android:id="@+id/resultFragment"
+        android:title="결과"
+        android:icon="@drawable/result"/>
+
+</menu>

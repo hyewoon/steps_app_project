@@ -65,5 +65,16 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     //workManager + coroutine
     implementation("androidx.work:work-runtime-ktx:2.9.0")
+    //navigation
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+    //MPandroid Chart
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
+
+
+
 
 }

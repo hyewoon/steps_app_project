@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/targetFragment"
+        android:name="com.example.steps_app_project.TargetFragment"
+        android:label="fragment_target"
+        tools:layout="@layout/fragment_target" >
+        <action
+            android:id="@+id/action_targetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.steps_app_project.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_dailyFragment"
+            app:destination="@id/dailyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_weeklyFragment"
+            app:destination="@id/weeklyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_monthlyFragment"
+            app:destination="@id/monthlyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.steps_app_project.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/dailyFragment"
+        android:name="com.example.steps_app_project.home.DailyFragment"
+        android:label="fragment_daily"
+        tools:layout="@layout/fragment_daily" />
+    <fragment
+        android:id="@+id/monthlyFragment"
+        android:name="com.example.steps_app_project.home.MonthlyFragment"
+        android:label="fragment_monthly"
+        tools:layout="@layout/fragment_monthly" />
+    <fragment
+        android:id="@+id/weeklyFragment"
+        android:name="com.example.steps_app_project.home.WeeklyFragment"
+        android:label="WeeklyFragment" />
+</navigation>
