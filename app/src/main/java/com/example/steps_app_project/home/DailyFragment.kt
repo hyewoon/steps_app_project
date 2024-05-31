@@ -6,6 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.steps_app_project.R
+import com.example.steps_app_project.db.StepsAppDataBase
+import com.example.steps_app_project.db.Users
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +40,15 @@ class DailyFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
+
+        val user = StepsAppDataBase.getDatabase(requireContext()).UsersDao()
+        val mydata = Users("like-the", "Kumo", "F", "20051212")
+
+        CoroutineScope(Dispatchers.IO).launch {
+            user.insert(mydata)
+        }
+
+
         return inflater.inflate(R.layout.fragment_daily, container, false)
     }
 
